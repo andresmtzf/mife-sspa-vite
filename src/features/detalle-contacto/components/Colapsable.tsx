@@ -26,4 +26,5 @@ export const Colapsable: React.FC<Props> = ({ titulo, children }) => {
 
 interface Props {
   titulo: string
+  children: React.ReactNode
 }

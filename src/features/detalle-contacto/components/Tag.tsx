@@ -5,5 +5,5 @@ export const Tag: React.FC<Props> = ({ titulo }) => {
 }
 
 interface Props {
-  titulo
+  titulo: string
 }

@@ -13,4 +13,5 @@ export const TableContentDetalle: React.FC<Props> = ({ id, activo, children }) =
 interface Props {
   id: string
   activo?: boolean
+  children: React.ReactNode
 }

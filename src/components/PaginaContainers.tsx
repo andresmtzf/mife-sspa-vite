@@ -2,7 +2,10 @@ const customStyles = {
   maxWidth: '1400px',
 }
 
-export const HeaderPagina: React.FunctionComponent<{ titulo: string }> = ({ titulo, children }) => {
+export const HeaderPagina: React.FunctionComponent<{
+  titulo: string
+  children: React.ReactNode
+}> = ({ titulo, children }) => {
   return (
     <div className='my-4 container d-flex flex-stack' style={customStyles}>
       <div className='page-title d-flex flex-column justify-content-center flex-wrap me-3'>
@@ -15,7 +18,7 @@ export const HeaderPagina: React.FunctionComponent<{ titulo: string }> = ({ titu
   )
 }
 
-export const BodyPagina: React.FunctionComponent = ({ children }) => {
+export const BodyPagina: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className='my-6 container p-0' style={customStyles}>
       {children}

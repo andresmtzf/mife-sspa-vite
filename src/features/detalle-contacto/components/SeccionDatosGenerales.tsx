@@ -11,8 +11,8 @@ import { MAPA_ROLES_ICONO, TarjetaRol } from './TarjetaRol'
 
 export const SeccionDatosGenerales: React.FC<Props> = ({
   contacto,
-  fechasImportantes,
-  contactosVinculados,
+  /* fechasImportantes,
+  contactosVinculados, */
 }) => {
   return (
     <div className='card card-bordered mb-4 min-h-800px'>
@@ -73,7 +73,7 @@ export const SeccionDatosGenerales: React.FC<Props> = ({
           <div className='d-flex flex-wrap flex-sm-nowrap mt-1'>
             <div className='d-flex flex-wrap container '>
               {contacto.roles.map((r) => (
-                <TarjetaRol titulo={r} icono={MAPA_ROLES_ICONO.get(r)} />
+                <TarjetaRol titulo={r} icono={MAPA_ROLES_ICONO.get(r)!} />
               ))}
             </div>
           </div>

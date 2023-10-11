@@ -1,21 +1,21 @@
-import { Button, Icon, Pagination, usePagination } from 'ui-react-components-ui'
-import { PaginadoContactos } from './models/contacto.type'
 import { useState } from 'react'
 import ReactTooltip from 'react-tooltip'
-import logoGEH from '../../assets/logos/logo-geh.png'
-import logoHB from '../../assets/logos/habil_color.png'
-import logoUNOSIETE from '../../assets/logos/unosiete_color.png'
-import { Consolidado } from './models/cosolidado.type'
 import { SwiperSlide } from 'swiper/react'
-import { CardConsolidado } from './components/CardConsolidadoContactos'
-import { PanelFiltrosContactos } from './components/PanelFiltrosContactos'
-import { CardContacto } from './components/CardContacto'
-import { AppConstantes } from '../../utils/Constantes'
-import { BusquedaContactosForm, filtrosBusqueda } from './models/filtroContactos.type'
-import { Filtro } from '../../models/filtros.type'
-import { SwiperContacto } from './components/SwiperContactos'
+import { Button, Icon, Pagination, usePagination } from 'ui-react-components-ui'
+import logoHB from '../../assets/logos/habil_color.png'
+import logoGEH from '../../assets/logos/logo-geh.png'
+import logoUNOSIETE from '../../assets/logos/unosiete_color.png'
 import { BodyPagina } from '../../components'
+import { Filtro } from '../../models/filtros.type'
+import { AppConstantes } from '../../utils/Constantes'
+import { CardConsolidado } from './components/CardConsolidadoContactos'
+import { CardContacto } from './components/CardContacto'
 import { PanelConsolidadoContactos } from './components/PanelConsolidadoContactos'
+import { PanelFiltrosContactos } from './components/PanelFiltrosContactos'
+import { SwiperContacto } from './components/SwiperContactos'
+import { PaginadoContactos } from './models/contacto.type'
+import { Consolidado } from './models/cosolidado.type'
+import { BusquedaContactosForm, filtrosBusqueda } from './models/filtroContactos.type'
 
 export const Contactos = () => {
   const paginadoContactos: PaginadoContactos = {
@@ -177,9 +177,9 @@ export const Contactos = () => {
     },
   ]
 
-  let descripcionConcatenadaTags = []
-  let descripcionConcatenadaTipos = []
-  let descripcionConcatenadaPersonaMoral = []
+  let descripcionConcatenadaTags: any[] = []
+  let descripcionConcatenadaTipos: any[] = []
+  let descripcionConcatenadaPersonaMoral: any[] = []
 
   const { setPerPage, setPage, page, perPage } = usePagination()
   const [mostrarPanelConsolidado, setMostrarPanelConsolidado] = useState(false)
@@ -472,7 +472,7 @@ export const Contactos = () => {
                       idContactoSeleccionado={idContactoSeleccionado}
                       setIdContactosSeleccionado={setIdContactosSeleccionado}
                       setTextoTooltip={enviarTextoTooltip}
-                      dataTip={textoTooltip}></CardContacto>
+                      dataTip={textoTooltip!}></CardContacto>
                   </div>
                 ))}
                 <div className='col-12'>
