@@ -1,0 +1,342 @@
+///* TODO AMF [29/09/2023]: Eliminar dummy */
+/* TODO AMF [02/10/2023]: Verificar generacion de badges, arreglos de string */
+import { ContactoPersonaFisica } from './Contacto'
+
+export const contactoPersonaFisica = {
+  tratamiento: 'Ingeniero',
+  Nombre: 'Dorian',
+  primerApellido: 'Chávez',
+  segundoApellido: 'Juárez',
+  roles: ['Colaborador', 'Cliente', 'Proveedor', 'Usuario de sistema', 'Candidato'],
+  fechaNacimiento: 'XX/XX/XXXX',
+  rfc: 'XAXX010101000',
+  acronimo: 'DC',
+  tags: ['2020', 'GEH', 'HB', 'I2D'],
+  fechasImportantes: [
+    { relalcion: 'Esposa', etiqueta: 'Cumpleaños', fecha: '15/sep/1988' },
+    { relalcion: 'Hijo', etiqueta: 'Cumpleaños', fecha: '02/Oct/1998' },
+    { relalcion: 'Hija', etiqueta: 'Cumpleaños', fecha: '30/May/2008' },
+  ],
+  contactosVinculados: [
+    { Contacto: 'Zurich', puesto: 'XXXXXXX' },
+    { Contacto: 'Veolia', puesto: 'XXXXXXX' },
+    { Contacto: 'Argos', puesto: 'XXXXXXX' },
+  ],
+  usuarioDeSistema: 'Sergio Perez',
+  cliente: true,
+  colaborador: {
+    idEmpleadoInterno: '153294',
+    idEmpleadoNominax: '2598HB3',
+    tipoColaborador: 'Prestador de servicios',
+    modalidad: 'Residencias',
+    seguro: '789546GTH5',
+    actividades: [
+      'Coordinador',
+      'Gerente de cuenta',
+      'Autorizador de operaciones',
+      'Autorizador de finanzas',
+    ],
+    montoMaximo: '50,000.00',
+    contrato: {
+      fechaInicio: '01/Feb/2018',
+      fechaFin: '01/Feb/2020',
+      testigos: ['Juan Perez', 'María Juarez'],
+      url: '',
+    },
+  },
+  proveedor: {
+    tipoProveedor: 'Tecnología',
+    factura: true,
+    numeroCliente: '126',
+  },
+  direcciones: [
+    {
+      direccionPrincipal: true,
+      direccionFiscal: true,
+      tipoDireccion: 'Oficina',
+      codigoPostal: '00000',
+      calle: '',
+      numeroExterios: '',
+      numeroInterior: '',
+      colonia: '',
+      municipio: '',
+      estado: '',
+      pais: '',
+      activa: true,
+    },
+    {
+      direccionPrincipal: true,
+      direccionFiscal: true,
+      tipoDireccion: 'Oficina',
+      codigoPostal: '00000',
+      calle: '',
+      numeroExterios: '',
+      numeroInterior: '',
+      colonia: '',
+      municipio: '',
+      estado: '',
+      pais: '',
+      activa: false,
+    },
+  ],
+  correos: [
+    { correoPrincipal: true, tipoCorreo: 'Personal', correo: '' },
+    { correoPrincipal: true, tipoCorreo: 'Corporativo', correo: '' },
+  ],
+  telefonos: [
+    { tipoTelefono: 'Casa', numero: '', extension: '' },
+    { tipoTelefono: 'Oficina', numero: '', extension: '' },
+    { tipoTelefono: 'Movil', numero: '', extension: '' },
+  ],
+  cuentas: [
+    {
+      cuentaPrincipal: true,
+      tipoCuenta: 'Débito',
+      cuenta: {
+        tipoMoneda: 'MXN',
+        banco: 'Banamex',
+        clabeInterbancari: '',
+        numeroCuenta: '',
+        numeroTarjeta: '',
+        nombreTitular: '',
+        aliasCuenta: '',
+      },
+    },
+  ],
+}
+
+export const contactoPersonaMoral = {
+  razonSocial: 'Hábil',
+  roles: ['Cliente', 'Empresa Administrada', ' Proveedor'],
+  fechaAniversario: 'XX/XX/XXXX',
+  rfc: 'XAXX010101000',
+  acronimo: 'HA',
+  tags: ['2020', 'HB'], //Aun falta como visualizarlos
+  fechasImportantes: [
+    { relalcion: 'Esposa', etiqueta: 'Cumpleaños', fecha: '15/sep/1988' },
+    { relalcion: 'Hijo', etiqueta: 'Cumpleaños', fecha: '02/Oct/1998' },
+    { relalcion: 'Hija', etiqueta: 'Cumpleaños', fecha: '30/May/2008' },
+  ],
+  contactosVinculados: [
+    { Contacto: 'Zurich', puesto: 'XXXXXXX' },
+    { Contacto: 'Veolia', puesto: 'XXXXXXX' },
+    { Contacto: 'Argos', puesto: 'XXXXXXX' },
+  ],
+  cliente: false,
+  empresaAdministrada: true,
+  Proveedor: { tipoProveedor: 'Tecnologías', factura: true, númeroCliente: '000' },
+  representanteLegal: 'Sergio Perez',
+  apoderadoLegal: 'Sergio Perez',
+  direcciones: [
+    {
+      direccionPrincipal: true,
+      direccionFiscal: true,
+      tipoDireccion: 'Oficina',
+      codigoPostal: '00000',
+      calle: '',
+      numeroExterios: '',
+      numeroInterior: '',
+      colonia: '',
+      municipio: '',
+      estado: '',
+      pais: '',
+      activa: true,
+    },
+    {
+      direccionPrincipal: true,
+      direccionFiscal: true,
+      tipoDireccion: 'Oficina',
+      codigoPostal: '00000',
+      calle: '',
+      numeroExterios: '',
+      numeroInterior: '',
+      colonia: '',
+      municipio: '',
+      estado: '',
+      pais: '',
+      activa: false,
+    },
+  ],
+  correos: [
+    { correoPrincipal: true, tipoCorreo: 'Personal', correo: '' },
+    { correoPrincipal: true, tipoCorreo: 'Corporativo', correo: '' },
+  ],
+  telefonos: [
+    { tipoTelefono: 'Casa', numero: '', extension: '' },
+    { tipoTelefono: 'Oficina', numero: '', extension: '' },
+    { tipoTelefono: 'Movil', numero: '', extension: '' },
+  ],
+  cuentas: [
+    {
+      cuentaPrincipal: true,
+      tipoCuenta: 'Débito',
+      cuenta: {
+        tipoMoneda: 'MXN',
+        banco: 'Banamex',
+        clabeInterbancari: '',
+        numeroCuenta: '',
+        numeroTarjeta: '',
+        nombreTitular: '',
+        aliasCuenta: '',
+      },
+    },
+  ],
+}
+
+export const personaFisica: ContactoPersonaFisica = {
+  datosGenerales: {
+    tratamiento: 'Ingeniero',
+    nombre: 'Dorian',
+    primerApellido: 'Chávez',
+    segundoApellido: 'Juárez',
+    fechaNacimiento: '1990-05-15',
+    rfc: 'XAXX900515A1B',
+    acronimo: 'DC',
+    tags: ['2020', 'GEH', 'HB', 'I2D'],
+    roles: ['Colaborador', 'Cliente', 'Proveedor', 'Usuario de sistema', 'Candidato'],
+  },
+  fechasImportantes: [
+    { relacion: 'Esposa', evento: 'Cumpleaños', fecha: '15-sep-1988' },
+    { relacion: 'Hijo', evento: 'Cumpleaños', fecha: '02-Oct-1998' },
+    { relacion: 'Hija', evento: 'Cumpleaños', fecha: '30-May-2008' },
+  ],
+  contactosVinculados: [
+    { contacto: 'Zurich', puesto: 'Administración' },
+    { contacto: 'Veolia', puesto: 'Desarrollo de soluciones' },
+    { contacto: 'Argos', puesto: 'PMO' },
+  ],
+  colaborador: {
+    identificacion: {
+      idEmpleado: '153294',
+      idEmpleadoNomina: '153294',
+      tipoColaborador: 'Prestador de servicios',
+      modalidad: 'Residencias',
+    },
+    filial: {
+      filial: 'UnoSiete',
+      direccion: 'Dirección comercial',
+      puesto: 'Administración',
+    },
+    coordinador: true,
+    gerenteDeCuenta: true,
+    seguro: {
+      tieneSeguro: true,
+      seguro: '789546GTH5',
+    },
+    contrato: {
+      tieneContrato: true,
+      fechaInicio: '28/sep/2023',
+      fechaFin: '29/sep/2023',
+      firma: 'Juan Perez',
+      testigos: ['Fernando Alonso', 'Carlos Sainz'],
+    },
+  },
+  proveedor: {
+    proveedor: true,
+    tipoProveedor: 'Tecnología',
+    factura: true,
+    numeroCliente: '126',
+  },
+  usuarioSistema: {
+    usuarioSistema: true,
+    usuario: 'Dorian Chávez',
+  },
+  datosEspecificos: {
+    direcciones: [
+      {
+        direccion: 'Chalco #31, Colonia El Conde Naucalpan de Juárez, Estado de México 53500',
+        tipoDireccion: ['PR', 'FS', 'CS'],
+      },
+      {
+        direccion: 'Chalco #31, Colonia El Conde Naucalpan de Juárez, Estado de México 53500',
+        tipoDireccion: ['PR', 'FS', 'CS'],
+      },
+      {
+        direccion: 'Chalco #31, Colonia El Conde Naucalpan de Juárez, Estado de México 53500',
+        tipoDireccion: ['PR', 'FS', 'CS'],
+      },
+      {
+        direccion: 'Chalco #31, Colonia El Conde Naucalpan de Juárez, Estado de México 53500',
+        tipoDireccion: ['PR', 'FS', 'CS'],
+      },
+    ],
+    correos: [
+      {
+        esCorreoPrincipal: true,
+        correo: 'dorian.chavez@habilgroup.com',
+        tipoDeCorreo: 'Personal',
+      },
+      {
+        esCorreoPrincipal: false,
+        correo: 'dorian.chavez@habilgroup.com',
+        tipoDeCorreo: 'Personal',
+      },
+      {
+        esCorreoPrincipal: false,
+        correo: 'dorian.chavez@habilgroup.com',
+        tipoDeCorreo: 'Personal',
+      },
+      {
+        esCorreoPrincipal: true,
+        correo: 'dorian.chavez@habilgroup.com',
+        tipoDeCorreo: 'Personal',
+      },
+    ],
+    telefonos: [
+      {
+        esTelefonoPrincipal: true,
+        codigo: '52',
+        tipoDeTelefono: 'Casa',
+        numero: '552-000-0000',
+      },
+      {
+        esTelefonoPrincipal: false,
+        codigo: '52',
+        tipoDeTelefono: 'Casa',
+        numero: '552-000-0000',
+      },
+      {
+        esTelefonoPrincipal: false,
+        codigo: '52',
+        tipoDeTelefono: 'Casa',
+        numero: '552-000-0000',
+      },
+      {
+        esTelefonoPrincipal: false,
+        codigo: '52',
+        tipoDeTelefono: 'Casa',
+        numero: '552-000-0000',
+      },
+    ],
+    cuentas: [
+      {
+        esCuentaPrincipal: true,
+        tipoDeCuenta: 'Débito',
+        tipoDeMoneda: 'MXN',
+        numeroDeCuenta: '124586397586',
+        Banco: 'Banamex',
+        nombreTitular: 'Dorian Chavez',
+        clabeInterbancaria: ' 124586397586',
+        aliasDeCuenta: 'Personal',
+      },
+      {
+        esCuentaPrincipal: false,
+        tipoDeCuenta: 'Crédito',
+        tipoDeMoneda: 'MXN',
+        numeroDeCuenta: '124586397586',
+        Banco: 'Banamex',
+        nombreTitular: 'Dorian Chavez',
+        clabeInterbancaria: ' 124586397586',
+        aliasDeCuenta: 'Personal',
+        creditoDisponible: '15,000.00',
+        tipoDeCredito: 'Simple',
+      },
+      {
+        esCuentaPrincipal: false,
+        tipoDeCuenta: 'Efectivo',
+        tipoDeMoneda: 'MXN',
+        cuentaDeEfectivo: '001',
+      },
+    ],
+  },
+}

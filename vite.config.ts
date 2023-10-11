@@ -10,7 +10,12 @@ export default defineConfig({
       type: 'mife',
       serverPort: 9010,
       spaEntryPoint: 'src/spa.tsx',
-      projectId: 'sspamife',
+      projectId: 'contactos',
     }),
   ],
+  resolve: {
+    alias: {
+      '~bootstrap': '/node_modules/bootstrap',
+    },
+  },
 })

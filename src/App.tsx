@@ -1,31 +1,24 @@
-import { useState } from 'react'
-import './App.css'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './assets/custom.scss'
+import { Contactos } from './features/pagina-contactos/PaginaContactos'
+import { routes } from './routing/routes'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function Root() {
   return (
-    <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Este es el proyecto microfrontend</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route key={'contactos'} path={'contactos'} element={<Contactos />} />
+        {routes.map(({ children }) => {
+          return (
+            <>
+              {children?.map((props) => (
+                <Route key={props.path} path={props.path} element={<props.Componente />} />
+              ))}
+            </>
+          )
+        })}
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
