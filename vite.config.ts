@@ -10,7 +10,6 @@ export default defineConfig({
       type: 'mife',
       serverPort: 9010,
       spaEntryPoint: 'src/spa.tsx',
-      projectId: 'contactos',
     }),
   ],
   resolve: {
